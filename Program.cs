@@ -15,8 +15,10 @@ namespace Aula28LerDadosDoExcel
             p1.Preco = 5500f;
 
             p1.Cadastrar(p1);
+            p1.Remover("Tagma");
 
-            List<Produto> lista = p1.Ler();
+            //List<Produto> lista = p1.Ler();
+            List<Produto> lista = p1.Filtrar("Ibanez");
 
             foreach (Produto item in lista)
             {

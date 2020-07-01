@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
+
 namespace Aula28LerDadosDoExcel
 {
     public class Produto
@@ -62,7 +64,41 @@ namespace Aula28LerDadosDoExcel
  
             }
 
+             prod = prod.OrderBy(y => y.Nome).ToList();
+             
             return prod;
+        }
+
+        public void Remover(string _termo){
+          //Criamos uma lista que servirá como uma espécie de backup para as linhas do csv
+          List<string> linhas = new List<string>(); 
+
+          // Utilizamos a biblioteca StreamReader para ler nosso csv
+          using(StreamReader arquivo = new StreamReader(PATH)){
+              string linha;
+              while((linha = arquivo.ReadLine()) != null){
+
+                  linhas.Add(linha);
+
+              }
+          }
+
+          //enovamos as linhas que tiverem o termo passado como argumento
+          // codigo = 1; nome = Tagma; preco = 7200
+          linhas.RemoveAll(l => l.Contains(_termo)); 
+
+          using(StreamWriter output = new StreamWriter(PATH)){
+
+              foreach(string In in linhas){
+                  output.Write(In + "\n");
+              }
+
+
+          }
+        }
+        public List<Produto> Filtrar(string _nome){
+
+            return Ler().FindAll(x => x.Nome == _nome);
         }
 
         /// <summary>
