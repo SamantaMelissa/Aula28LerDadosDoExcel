@@ -1,0 +1,13 @@
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\bin\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.exe
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\bin\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.deps.json
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\bin\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.runtimeconfig.json
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\bin\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.runtimeconfig.dev.json
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\bin\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.dll
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\bin\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.pdb
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\obj\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.csprojAssemblyReference.cache
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\obj\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.csproj.CoreCompileInputs.cache
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\obj\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.AssemblyInfoInputs.cache
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\obj\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.AssemblyInfo.cs
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\obj\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.dll
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\obj\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.pdb
+C:\Users\saman\OneDrive\Documentos\Aula28LerDadosDoExcel\obj\Debug\netcoreapp3.1\Aula28LerDadosDoExcel.genruntimeconfig.cache
