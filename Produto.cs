@@ -96,6 +96,41 @@ namespace Aula28LerDadosDoExcel
 
           }
         }
+
+        public void Alterar (Produto produtoAlterado ){
+
+            //Criamos uma lista que servirá como uma espécie de backup para as linhas do csv
+          List<string> linhas = new List<string>(); 
+
+          // Utilizamos a biblioteca StreamReader para ler nosso csv
+          using(StreamReader arquivo = new StreamReader(PATH)){
+              string linha;
+              while((linha = arquivo.ReadLine()) != null){
+
+                  linhas.Add(linha);
+
+              }
+
+        }
+
+            linhas.RemoveAll( x => x.Split(";").Contains(produtoAlterado.Codigo.ToString()));
+
+            //linhas.RemoveAll(z => z.Split(";")[0].Split("=")[1] == produtoAlterado.Codigo.ToString());
+
+            linhas.Add(PrepararLinha(produtoAlterado));
+
+
+            using(StreamWriter output = new StreamWriter(PATH)){
+
+              foreach(string In in linhas){
+                  output.Write(In + "\n");
+              }
+
+
+          }
+
+
+        }
         public List<Produto> Filtrar(string _nome){
 
             return Ler().FindAll(x => x.Nome == _nome);
@@ -123,3 +158,5 @@ namespace Aula28LerDadosDoExcel
     
     }
 }
+
+// Reescrita de um código com o propósito de melhorar --> Refatoração
