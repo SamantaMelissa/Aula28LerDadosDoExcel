@@ -99,19 +99,10 @@ namespace Aula28LerDadosDoExcel
 
         public void Alterar (Produto produtoAlterado ){
 
-            //Criamos uma lista que servirá como uma espécie de backup para as linhas do csv
-          List<string> linhas = new List<string>(); 
+            List<string> linhas = new List<string>(); 
 
           // Utilizamos a biblioteca StreamReader para ler nosso csv
-          using(StreamReader arquivo = new StreamReader(PATH)){
-              string linha;
-              while((linha = arquivo.ReadLine()) != null){
-
-                  linhas.Add(linha);
-
-              }
-
-        }
+             Reescrever(linhas);
 
             linhas.RemoveAll( x => x.Split(";").Contains(produtoAlterado.Codigo.ToString()));
 
@@ -120,17 +111,36 @@ namespace Aula28LerDadosDoExcel
             linhas.Add(PrepararLinha(produtoAlterado));
 
 
-            using(StreamWriter output = new StreamWriter(PATH)){
+           
 
-              foreach(string In in linhas){
-                  output.Write(In + "\n");
-              }
-
-
+            ReescreverCSV(linhas);
+            
+        
           }
 
+        
+            private void Reescrever(List<string> lines){
 
+            using(StreamReader arquivo = new StreamReader(PATH)){
+              string linha;
+              while((linha = arquivo.ReadLine()) != null){
+
+                  lines.Add(linha);
+
+              }
+          }
         }
+
+        private void ReescreverCSV(List<string> lines){
+
+            using(StreamWriter output = new StreamWriter(PATH)){
+
+              foreach(string In in lines){
+                  output.Write(In + "\n");
+              }
+          }
+        }
+    
         public List<Produto> Filtrar(string _nome){
 
             return Ler().FindAll(x => x.Nome == _nome);

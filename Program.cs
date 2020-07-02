@@ -15,6 +15,14 @@ namespace Aula28LerDadosDoExcel
             p1.Preco = 5500f;
 
             p1.Cadastrar(p1);
+
+            Produto alterado = new Produto();
+            alterado.Codigo = 3;
+            alterado.Nome = "Fender";
+            alterado.Preco = 6800f;
+
+            p1.Alterar(alterado);
+
             p1.Remover("Tagma");
 
             //List<Produto> lista = p1.Ler();
